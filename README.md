@@ -14,9 +14,19 @@ It is designed to be responsive and visually appealing.
 - **Action Buttons**: Includes "Add to Cart" and "Add to Wishlist" buttons.
 - **Favicon**: Custom favicon added to the project.
 
-## Installation
+## Usage
+
+- **Navigation Arrows**: Click on the left and right arrows to navigate through the products.
+- **Pagination Dots**: Click on the pagination dots at the bottom to jump to a specific slide.
+- **Swipe/Drag**: On touch devices, swipe left or right to move between slides. On desktop, you can click and drag the slides.
 
 ### Prerequisites
 
 - Node.js (version 14 or higher)
 - npm (Node Package Manager)
+
+## Installation
+
+- clone repo
+- npm install
+- npm run dev
