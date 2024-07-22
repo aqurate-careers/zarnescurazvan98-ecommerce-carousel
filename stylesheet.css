@@ -25,21 +25,38 @@ body {
 .product {
   text-align: center;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   background: white;
   max-width: 300px;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
 }
 
 .product img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-.price, .discounted-price {
+.product h3 {
+  font-size: 1.5em;
   margin: 10px 0;
+}
+
+.price {
+  font-size: 1.2em;
+  text-decoration: line-through;
+  color: #999;
+}
+
+.discounted-price {
+  font-size: 1.5em;
+  color: #e74c3c;
 }
 
 .action-button, .wishlist-button {
@@ -50,13 +67,47 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover, .wishlist-button:hover {
+  background-color: #0056b3;
 }
 
 .wishlist-button {
   background-color: #28a745;
 }
 
+.wishlist-button:hover {
+  background-color: #1e7e34;
+}
+
+/* Styling for Swiper navigation buttons */
+.swiper-button-next, .swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 20px;
+  color: white;
+}
+
 @media (max-width: 768px) {
+  .product {
+    max-width: 250px;
+  }
+
   .product img {
     width: 100px;
     height: 100px;
@@ -65,9 +116,22 @@ body {
   .action-button, .wishlist-button {
     padding: 5px 10px;
   }
+
+  .swiper-button-next, .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 480px) {
+  .product {
+    max-width: 200px;
+  }
+
   .product img {
     width: 75px;
     height: 75px;
@@ -75,5 +139,14 @@ body {
 
   .action-button, .wishlist-button {
     padding: 3px 6px;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 12px;
   }
 }
